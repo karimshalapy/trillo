@@ -1,0 +1,59 @@
+.side-nav {
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+    %apply-z-index {
+        position: relative;
+        z-index: 1;
+    }
+    &__link {
+        &:link,
+        &:visited {
+            color: var(--color-grey-light-1);
+            text-transform: uppercase;
+            display: block;
+            padding: 1.5rem 3rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: .3rem;
+            background-color: var(--color-primary);
+            transform: scaleY(0);
+            transition: transform .2s, 
+                        width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                        background-color  .1s;
+        }
+        &--active,
+        &:hover,
+        &:focus {
+            &::before {
+                transform: scaleY(1);
+                width: 100%;
+            }
+        }
+        &:active::before {
+            background-color: var(--color-primary-light)
+        }
+        &-text {
+            @extend %apply-z-index;
+        }
+    }
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
+        vertical-align: middle;
+        @extend %apply-z-index;
+    }
+}
