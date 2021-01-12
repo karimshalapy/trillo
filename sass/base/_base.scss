@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem == 10pxs
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    min-height: 100vh;
+}
+ul, ol {
+    list-style: none;
+}
+%clear-border-and-decoration {
+    outline: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+a {
+    &:link,
+    &:visited {
+        @extend %clear-border-and-decoration;
+    }
+}
+button {
+        @extend %clear-border-and-decoration;
+        cursor: pointer;
+    background: none;
+}
+input {
+    @extend %clear-border-and-decoration;
+    
+}
