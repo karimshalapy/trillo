@@ -1,20 +1,45 @@
 .user-nav {
-    &__icon-box {
-        &::after {
-            content: "";
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-end;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:focus-within,
+        &:hover {
+            background-color: var(--color-grey-light-2);
         }
+    }
+    &__icon-box {
+        position: relative;
     }
     &__nav-icon {
         width: 2.25rem;
         height: 2.25rem;
+        fill: var(--color-grey-dark-2);
+    }
+    &__notification {
+        position: absolute;
+        top: 19%;
+        right: 19%;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+        width: 1.75rem;
+        height: 1.75rem;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 1.75rem;
     }
     &__user {
         &-img {
             width: 3.75rem;
             border-radius: 50%;
-        }
-        &-username {
-
+            vertical-align: middle;
+            margin-right: 1rem;
         }
     }
 }
