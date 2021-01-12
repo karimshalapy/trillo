@@ -15,7 +15,31 @@
 <body>
     <div class="container">
         <header class="header">
-            Header part
+            <img src="./img/logo.png" alt="trello logo" class="logo" />
+            <form action="#" class="search">
+                <input type="text" class="search__input">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="./img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__nav-icon">
+                        <use xlink:href="./img/sprite.svg#icon-bookmark"></use>
+                    </svg>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__nav-icon">
+                        <use xlink:href="./img/sprite.svg#icon-chat"></use>
+                    </svg>
+                </div>
+                <div class="user-nav__user">
+                    <img src="./img/user.jpg" alt="user photo" class="user-nav__user-img" />
+                    <span class="user-nav__user-username">Karim</span>
+                </div>
+            </nav>
         </header>
         <div class="content" id="content">
             <nav class="sidebar">navigation</nav>

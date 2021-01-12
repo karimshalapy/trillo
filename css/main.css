@@ -66,3 +66,21 @@ button {
 .hotel-view {
   background: #fff;
   flex: 2 1; }
+
+.logo {
+  height: 3.25rem; }
+
+.search__icon {
+  width: 2rem;
+  height: 2rem; }
+
+.user-nav__icon-box::after {
+  content: ""; }
+
+.user-nav__nav-icon {
+  width: 2.25rem;
+  height: 2.25rem; }
+
+.user-nav__user-img {
+  width: 3.75rem;
+  border-radius: 50%; }
