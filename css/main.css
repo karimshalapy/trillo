@@ -8,7 +8,8 @@
   --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+  --color-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3); }
 
 html {
   box-sizing: border-box;
@@ -42,3 +43,26 @@ a:link, a:visited, button, input {
 button {
   cursor: pointer;
   background: none; }
+
+.header {
+  height: 7rem;
+  background: #fff;
+  border-bottom: 1px solid var(--color-grey-light-2); }
+
+.container {
+  max-width: 120rem;
+  min-height: 50rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark); }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 1 1; }
+
+.hotel-view {
+  background: #fff;
+  flex: 2 1; }
