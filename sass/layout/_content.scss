@@ -1,5 +1,8 @@
 .content {
     display: flex;
+    @include respond($breakpoint-medium) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {

@@ -2,9 +2,13 @@
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+    @include respond($breakpoint-medium) {
+        padding: 2rem;
+       margin-bottom: 3rem;
+    }
 
     &::before {
         content:  "\201C";

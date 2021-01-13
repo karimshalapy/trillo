@@ -1,6 +1,9 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+    @include respond($breakpoint-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 2rem;

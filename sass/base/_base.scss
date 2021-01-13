@@ -1,6 +1,9 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem == 10pxs
+    @include respond($breakpoint-large) {
+        font-size: 50%; //1rem == 8pxs
+    }
 }
 *,
 *::after,

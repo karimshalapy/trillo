@@ -6,4 +6,9 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
+    @include respond($breakpoint-smallest) {
+        height: 11rem;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+    }
 }

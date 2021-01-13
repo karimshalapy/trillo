@@ -5,6 +5,12 @@
     background-color: var(--color-grey-light-1);
     border-bottom: var(--border-grey-light);
     font-size: 1.4rem;
+    @include respond($breakpoint-medium) {
+        padding: 3rem;
+    }
+    @include respond($breakpoint-small) {
+        flex-direction: column;
+    }
 }
 .description {
     flex: 0 0 60%;
@@ -12,6 +18,14 @@
     background-color: #fff;
     padding: 3rem;
     box-shadow: var(--shadow-light);
+    @include respond($breakpoint-medium) {
+        margin-right: 3rem;
+        padding: 2rem;
+    }
+    @include respond($breakpoint-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {

@@ -5,6 +5,13 @@
     justify-content: center;
     align-items: center;
 
+    @include respond($breakpoint-smallest) {
+        order: 2;
+        flex: 1 0 90%;
+        justify-self: center;
+        margin-top: 2rem;
+    }
+
     &:focus-within &__input{
         width: 100%;
         background-color: var(--color-grey-light-3);

@@ -1,9 +1,19 @@
 .side-nav {
     font-size: 1.4rem;
     margin-top: 3.5rem;
+    @include respond($breakpoint-medium) {
+        margin: 0;
+        display: flex;
+    }
     &__item {
         &:not(:last-child) {
             margin-bottom: .5rem;
+            @include respond($breakpoint-medium) {
+                margin: 0;
+            }
+        }
+        @include respond($breakpoint-medium) {
+            flex: 1;
         }
     }
     %apply-z-index {
@@ -19,6 +29,11 @@
             padding: 1.5rem 3rem;
             transition: var(--transition);
             position: relative;
+            @include respond($breakpoint-small) {
+                text-align: center;
+                padding: 1.5rem 0;
+            }
+            
         }
         &::before {
             content: "";
@@ -53,5 +68,10 @@
         margin-right: 2rem;
         vertical-align: middle;
         @extend %apply-z-index;
+        @include respond($breakpoint-small) {
+            display: block;
+            margin: 0 auto .7rem;
+            @include svg-size(1.5rem, currentColor);
+        }
     }
 }
