@@ -5,9 +5,16 @@
     display: inline-block;
     transition: var(--transition);
 
+    & span {
+        margin-left: .3rem;
+        transition: margin .2s;
+    }
     &:hover,
     &:focus {
         color: var(--color-grey-dark-1);
         animation: animation-pulsate .8s ease both infinite;
+        & span {
+            margin-left: .8rem;
+        }
     }
 }
