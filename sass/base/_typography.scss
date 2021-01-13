@@ -5,5 +5,7 @@ body {
     color: var(--color-grey-dark-2);
 }
 .paragraph {
-
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
 }

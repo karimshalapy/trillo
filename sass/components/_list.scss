@@ -1,5 +1,28 @@
 .list {
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--border-grey-light);
+    border-bottom: var(--border-grey-light);
+    display: flex;
+    flex-wrap: wrap;
     &__item {
+        flex-basis: 50%;
         
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin-right: .7rem;
+
+            // background-image: url("../img/chevron-thin-right.svg");
+            // background-size: cover;
+            
+            background-color: var(--color-primary);
+            mask-image: url("../img/chevron-thin-right.svg");
+                -webkit-mask-image: url("../img/chevron-thin-right.svg");
+            mask-size: cover;
+                -webkit-mask-size: cover;
+        }
     }
 }
