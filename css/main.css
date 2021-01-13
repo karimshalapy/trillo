@@ -10,6 +10,8 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-normal: 0 1rem 4rem rgba(0, 0, 0, .25);
+  --border-grey-light: 1px solid var(--color-grey-light-2);
   --transition: all .2s; }
 
 html {
@@ -45,10 +47,18 @@ button {
   cursor: pointer;
   background: none; }
 
+@keyframes animation-pulsate {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-normal); } }
+
 .header {
   height: 7rem;
   background: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--border-grey-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -186,6 +196,62 @@ button {
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
-    margin-right: 2rem;
     fill: currentColor;
+    margin-right: 2rem;
     vertical-align: middle; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    display: block;
+    width: 100%; }
+
+.btn-inline {
+  color: var(--color-primary);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .2rem;
+  display: inline-block;
+  transition: var(--transition); }
+  .btn-inline:hover, .btn-inline:focus {
+    color: var(--color-grey-dark-1);
+    animation: animation-pulsate .8s ease both infinite; }
+
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--border-grey-light); }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    margin-right: auto;
+    display: flex; }
+  .overview__location {
+    margin-right: 3rem; }
+  .overview__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+    vertical-align: middle; }
+    .overview__icon--location {
+      margin-right: .5rem; }
+  .overview__rating {
+    align-self: stretch;
+    padding: 0 2.25rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
+    .overview__rating-average {
+      font-size: 2.5rem;
+      font-weight: 300; }
+    .overview__rating-count {
+      font-size: .8rem;
+      text-transform: uppercase;
+      margin-top: -.3rem; }

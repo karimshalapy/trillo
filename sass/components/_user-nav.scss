@@ -17,9 +17,7 @@
         position: relative;
     }
     &__nav-icon {
-        width: 2.25rem;
-        height: 2.25rem;
-        fill: var(--color-grey-dark-2);
+        @include svg-size(2.25rem, var(--color-grey-dark-2));
     }
     &__notification {
         position: absolute;

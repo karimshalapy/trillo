@@ -1,0 +1,13 @@
+.btn-inline {
+    color: var(--color-primary);
+    border-bottom: 1px solid currentColor;
+    padding-bottom: .2rem;
+    display: inline-block;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--color-grey-dark-1);
+        animation: animation-pulsate .8s ease both infinite;
+    }
+}

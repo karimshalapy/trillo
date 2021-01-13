@@ -49,10 +49,8 @@
         }
     }
     &__icon {
-        width: 1.75rem;
-        height: 1.75rem;
+        @include svg-size(1.75rem, currentColor);
         margin-right: 2rem;
-        fill: currentColor;
         vertical-align: middle;
         @extend %apply-z-index;
     }

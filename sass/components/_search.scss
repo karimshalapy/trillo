@@ -37,9 +37,7 @@
         }
     }
     &__icon {
-        width: 2rem;
-        height: 2rem;
-        fill: currentColor;
+        @include svg-size(2rem, currentColor);
     }
 
 }

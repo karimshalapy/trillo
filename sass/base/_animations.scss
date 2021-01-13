@@ -1,0 +1,10 @@
+@keyframes animation-pulsate {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-normal);
+    }
+}
