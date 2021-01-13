@@ -15,15 +15,25 @@
             height: 1rem;
             width: 1rem;
             margin-right: .7rem;
-
-            // background-image: url("../img/chevron-thin-right.svg");
-            // background-size: cover;
-            
-            background-color: var(--color-primary);
             mask-image: url("../img/chevron-thin-right.svg");
                 -webkit-mask-image: url("../img/chevron-thin-right.svg");
             mask-size: cover;
                 -webkit-mask-size: cover;
+            background-color: var(--color-primary);
+            
+            @supports not (
+                (
+                    (background-color: var(--color-primary)) and 
+                    (mask-image: url("../img/chevron-thin-right.svg"))
+                ) or
+                (
+                    (-webkit-mask-image: url("../img/chevron-thin-right.svg")) and 
+                    (-webkit-mask-size: cover)
+                )
+            ) {
+                    background-image: url("../img/chevron-thin-right.svg");
+                    background-size: cover;
+            }
         }
     }
 }
